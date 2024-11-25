@@ -21,6 +21,11 @@ jobs:
         with:
           python-version: '3.9'
 
+      - name: Show current directory and list files
+        run: |
+          pwd
+          ls -la
+
       - name: Install dependencies
         run: |
           python -m venv venv
@@ -55,11 +60,16 @@ jobs:
         with:
           python-version: '3.9'
 
+      - name: Show current directory and list files
+        run: |
+          pwd
+          ls -la
+
       - name: Install dependencies
         run: |
           python -m venv venv
           .\venv\Scripts\activate
-          pip install -r .\requirements.txt
+          pip install -r requirements.txt
 
       - name: Build executable
         run: |
